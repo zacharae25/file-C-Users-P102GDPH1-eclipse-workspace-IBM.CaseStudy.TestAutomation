@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<listeners>
+		<listener class-name="com.qa.utility.Reporting"></listener>
+	</listeners>
+
+<parameter name="Url" value="http://www.Google.com/"></parameter>
+  <test thread-count="5" name="Funtional Test-Google" parallel="classes">
+  <parameter name="Browser" value="Chrome" ></parameter>
+    <classes>
+   <class name="com.qa.testscripts.TC_Amazon_01"/>
+     <class name="com.qa.testscripts.TC_Rediff_01"/>   
+       <class name="com.qa.testscripts.TC_Google_04"/>
+       <class name="com.qa.testscripts.TC_Guru_09"/> 
+         <class name="com.qa.testscripts.TC_Destination_05"/> 
+           <class name="com.qa.testscripts.TC_Guru_08"/> 
+       <class name="com.qa.testscripts.TC_Guru_Rediff_06"/> 
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
